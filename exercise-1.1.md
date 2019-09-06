@@ -1,4 +1,4 @@
-# Exercise 1. Enable web request logging
+# Enable web request logging (Ex 1.1)
 
 Let's take a look at the log files mentioned in the configuration.
 
