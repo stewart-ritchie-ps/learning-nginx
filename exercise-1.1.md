@@ -1,18 +1,6 @@
 # Enable web request logging (Ex 1.1)
 
-Let's take a look at the log files mentioned in the configuration.
-
-```
-cd /var/log/nginx/
-ls -l
-```
-
-```
-lrwxrwxrwx 1 root root 11 Aug 15 21:22 access.log -> /dev/stdout
-lrwxrwxrwx 1 root root 11 Aug 15 21:22 error.log -> /dev/stderr
-```
-
-Now let's uncomment the _access_log_ directive in _default.conf_ and save.
+Uncomment the _access_log_ directive in _default.conf_ and save.
 
 ```Nginx
 server {
