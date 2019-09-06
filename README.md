@@ -6,7 +6,7 @@ Learning material for NGINX.
 
 An easy approach to running NGINX is to pull and run the Docker image. We start by pulling the latest image and then run NGINX in detached server mode. The local 8080 port is mapped to the default port on which NGINX listens (80).
 
-```
+```batch
 docker pull nginx
 docker run -p 8080:80 -d nginx
 ```
