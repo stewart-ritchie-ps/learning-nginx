@@ -180,15 +180,15 @@ events {
 # - common settings for all servers.
 http {
 
-  # server context
-  # - settings for a specific virtual web server.
-  server {
+    # server context
+    # - settings for a specific virtual web server.
+    server {
   
-    # location context
-    # - setting for a specific request location.
-    location / {
+        # location context
+        # - setting for a specific request location.
+        location / {
+        }
     }
-  }
 }
 ```
 
@@ -212,9 +212,11 @@ Now let's uncomment the _access_log_ directive in _default.conf_ and save.
 
 ```Nginx
 server {
-  listen       80;
-  server_name  localhost;
-  access_log  /var/log/nginx/host.access.log  main;
+    listen       80;
+    server_name  localhost;
+    access_log  /var/log/nginx/host.access.log  main;
+    
+    # ...
 }
 ```
 
@@ -224,4 +226,41 @@ Exit to basgh and signal NGINX to reload the cofiguration - it should report _si
 nginx -s reload
 ```
 
+Tail the log file, then issue some requests from your browser (CTRL+C to exit tail).
 
+```
+tail -f /var/log/nginx/host.access.log
+```
+
+```
+172.17.0.1 - - [06/Sep/2019:15:29:48 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36" "-"
+172.17.0.1 - - [06/Sep/2019:15:40:32 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36" "-"
+172.17.0.1 - - [06/Sep/2019:15:40:40 +0000] "GET /banana HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36" "-"
+```
+
+### Exercise 2. Add error log
+
+Add the _error_log_ directive pointing to a new file.
+
+```Nginx
+server {
+    listen       80;
+    server_name  localhost;
+    access_log  /var/log/nginx/host.access.log  main;
+    error_log /var/log/nginx/host.error.log error;
+    
+    # ...
+}
+```
+
+Reload...
+
+```
+nginx -s reload
+```
+
+Request an unmapped location to generate a 404 and examine the new error log file.
+
+```
+2019/09/06 15:57:19 [error] 474#474: *6 open() "/usr/share/nginx/html/banana" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /banana HTTP/1.1", host: "l$
+```
