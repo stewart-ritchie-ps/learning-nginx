@@ -49,7 +49,7 @@ Note: if you need to familiarise yourself with the editor, do so now (we won't c
 Configuration of NGINX is performed by editing the _.conf_ files in the NGINX root directory and sub-directories.
 
 ```
-cd etc/nginx/
+cd /etc/nginx/
 ls -l
 ```
 
@@ -66,7 +66,7 @@ lrwxrwxrwx 1 root root   22 Aug 13 08:50 modules -> /usr/lib/nginx/modules
 -rw-r--r-- 1 root root 3610 Aug 13 08:50 win-utf
 ```
 
-Let's take a look at the root _nginx.conf_ configuration file. The file is structured using _directives_ some of which are scoped into _blocks_. The root configuration file tells us about the locations of other interesting files, e.g. /var/log/nginx/error.log. The _include_ directives are used to inline other configuration files so we have reasonable way of structuring complex configurations and re-using configuration snippets.
+Let's take a look at the root _nginx.conf_ configuration file. The file is structured using _directives_ some of which are scoped into _blocks_. The root configuration file tells us about the locations of other interesting files, e.g. /var/log/nginx/error.log. The _include_ directive is used to inline other configuration files so we have reasonable way of structuring complex configurations and re-using configuration snippets.
 
 ```Nginx
 user  nginx;
@@ -97,5 +97,65 @@ http {
     #gzip  on;
 
     include /etc/nginx/conf.d/*.conf;
+}
+```
+
+In actual fact, we would seldom need to edit the root configuration file. The files we want are a level down in the _conf.d_ directory.
+
+```
+cd /etc/nginx/conf.d/
+ls -l
+```
+
+```
+-rw-r--r-- 1 root root 1093 Aug 13 08:50 default.conf
+```
+
+There's only one file to start with, _default.conf_, but we are free to create as many as we need here - we might decide to have one file per server for example. For the purposes of learning, just work with the default configuration file.
+
+```Nginx
+server {
+    listen       80;
+    server_name  localhost;
+
+    #charset koi8-r;
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+    #
+    #location ~ \.php$ {
+    #    proxy_pass   http://127.0.0.1;
+    #}
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    #location ~ \.php$ {
+    #    root           html;
+    #    fastcgi_pass   127.0.0.1:9000;
+    #    fastcgi_index  index.php;
+    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+    #    include        fastcgi_params;
+    #}
+
+    # deny access to .htaccess files, if Apache's document root
+    # concurs with nginx's one
+    #
+    #location ~ /\.ht {
+    #    deny  all;
+    #}
 }
 ```
