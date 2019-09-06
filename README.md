@@ -1,4 +1,4 @@
-# nginx-ref
+# Getting to grips with NGINX
 
 Learning material for NGINX.
 
@@ -196,7 +196,7 @@ When contexts are nested like this, directives may be implicitly inherited from 
 
 ## Exercises
 
-[1. Enable web request logging](/exercise-1.md)
-[2. Add error logging](/exercise-2.md)
+- [1.1 Enable web request logging](/exercise-1.1.md)
+- [1.2 Add error logging](/exercise-1.2.md)
 
 
