@@ -4,7 +4,7 @@ Learning material for NGINX.
 
 ## Running in Docker
 
-An easy approach to running NGINX is to pull and run the Docker image. We start by pulling the latest image and then run NGINX in detached server mode. The local 8080 port is mapped to the default port on which NGINX listens (80).
+An easy approach to running NGINX is to pull and run the Docker image. We start by pulling the latest image and then run NGINX in detached server mode. The local 8080 port is mapped to the default port on which NGINX listens (80). Check that it is running by browsing http://localhost:8080/ and seeing the NGINX welcome page.
 
 ```
 docker pull nginx
@@ -111,7 +111,7 @@ ls -l
 -rw-r--r-- 1 root root 1093 Aug 13 08:50 default.conf
 ```
 
-There's only one file to start with, _default.conf_, but we are free to create as many as we need here - we might decide to have one file per server for example. For the purposes of learning, just work with the default configuration file.
+To start with there's a single file (_default.conf_), but we can create as many as we need - we might decide to have one file per server for example. For the purposes of learning, just work with the default configuration file.
 
 ```Nginx
 server {
@@ -159,3 +159,69 @@ server {
     #}
 }
 ```
+
+## NGINX contexts
+
+Configuration directives are grouped into contexts that scope their application allowing us to serve a specific file for a specific web request, or perform a redirect.
+
+The default files have the following structure.
+
+```Nginx
+# implicit main context
+
+# events context 
+# - controls how NGINX integrates with host OS.
+# - only one instance of this context allowed.
+events {
+}
+
+# http context
+# - handles http(s) traffic
+# - common settings for all servers.
+http {
+
+  # server context
+  # - settings for a specific virtual web server.
+  server {
+  
+    # location context
+    # - setting for a specific request location.
+    location / {
+    }
+  }
+}
+```
+
+When contexts are nested like this, directives may be implicitly inherited from parent contexts, or overridden in child contexts.
+
+### Exercise 1. Enable web request logging
+
+Let's take a look at the log files mentioned in the configuration.
+
+```
+cd /var/log/nginx/
+ls -l
+```
+
+```
+lrwxrwxrwx 1 root root 11 Aug 15 21:22 access.log -> /dev/stdout
+lrwxrwxrwx 1 root root 11 Aug 15 21:22 error.log -> /dev/stderr
+```
+
+Now let's uncomment the _access_log_ directive in _default.conf_ and save.
+
+```Nginx
+server {
+  listen       80;
+  server_name  localhost;
+  access_log  /var/log/nginx/host.access.log  main;
+}
+```
+
+Exit to basgh and signal NGINX to reload the cofiguration - it should report _signal process started_, if you get any errors check for syntax errors in your _.conf_ files.
+
+```
+nginx -s reload
+```
+
+
