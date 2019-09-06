@@ -2,11 +2,11 @@
 
 Learning material for NGINX.
 
-## Getting started
+## Running in Docker
 
 An easy approach to running NGINX is to pull and run the Docker image. We start by pulling the latest image and then run NGINX in detached server mode. The local 8080 port is mapped to the default port on which NGINX listens (80).
 
-```batch
+```
 docker pull nginx
 docker run -p 8080:80 -d nginx
 ```
@@ -18,6 +18,16 @@ docker container ls -a
 ```
 
 ```
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                  PORTS                  NAMES           
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                  PORTS                  NAMES
 42e6ba0fde39        nginx               "nginx -g 'daemon of…"   5 minutes ago       Up 5 minutes            0.0.0.0:8080->80/tcp   eloquent_hellman
+```
+
+```
+docker exec -it 42e6ba0fde39 bash
+```
+
+You should now be connected to the NGINX instance with bash. By default you get root access - so no sudo needed.
+
+```
+root@42e6ba0fde39:/#
 ```
