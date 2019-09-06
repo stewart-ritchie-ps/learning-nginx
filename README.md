@@ -194,6 +194,10 @@ http {
 
 When contexts are nested like this, directives may be implicitly inherited from parent contexts, or overridden in child contexts.
 
+## Exercises
+
+[1. Enable web request logging](/exercise-1)
+
 ### Exercise 1. Enable web request logging
 
 Let's take a look at the log files mentioned in the configuration.
