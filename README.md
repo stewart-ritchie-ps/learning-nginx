@@ -2,6 +2,8 @@
 
 This learning material is an introduction to working with NGINX.
 
+Current status: *EVOLVING*
+
 Contributions welcome!
 
 ## Contents
