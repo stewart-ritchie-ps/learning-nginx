@@ -4,48 +4,6 @@ Learning material for NGINX.
 
 Evolving material produced during Dev Days.
 
-## Running in Docker
-
-An easy approach to running NGINX is to pull and run the Docker image. We start by pulling the latest image and then run NGINX in detached server mode. The local 8080 port is mapped to the default port on which NGINX listens (80). Check that it is running by browsing http://localhost:8080/ and seeing the NGINX welcome page.
-
-```
-docker pull nginx
-docker run -p 8080:80 -d nginx
-```
-
-You can connect to the container using the container id returned by _docker run_, or at any time by listing your docker containers.
-
-```
-docker container ls -a
-```
-
-```
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                  PORTS                  NAMES
-42e6ba0fde39        nginx               "nginx -g 'daemon of…"   5 minutes ago       Up 5 minutes            0.0.0.0:8080->80/tcp   eloquent_hellman
-```
-
-```
-docker exec -it 42e6ba0fde39 bash
-```
-
-You should now be connected to the NGINX instance with bash. By default you get root access with Docker (no _sudo_ needed).
-
-```
-root@42e6ba0fde39:/#
-```
-
-## Installing a file editor
-
-Docker images are very bare, so we need to install a file editor. Start by updating the package list. Then, install an editor. _Nano_ is a good choice for beginners but _vim_ tends to be used more commonly. 
-
-```
-apt-get update
-apt-get install nano
-apt-get install vim
-```
-
-Note: if you need to familiarise yourself with the editor, do so now (we won't cover those details here).
-
 ## NGINX configuration files
 
 Configuration of NGINX is performed by editing the _.conf_ files in the NGINX root directory and sub-directories.
