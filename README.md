@@ -4,6 +4,13 @@ Learning material for NGINX.
 
 Evolving material produced during Dev Days.
 
+## Contents
+
+- [Getting started](/getting-started.md)
+- - [Exercise - Enable web request logging](/exercise-1.1.md)
+- - [Exercise - Add error logging](/exercise-1.2.md)
+
+
 ## NGINX configuration files
 
 Configuration of NGINX is performed by editing the _.conf_ files in the NGINX root directory and sub-directories.
@@ -153,10 +160,3 @@ http {
 ```
 
 When contexts are nested like this, directives may be implicitly inherited from parent contexts, or overridden in child contexts.
-
-## Exercises
-
-- [1.1 Enable web request logging](/exercise-1.1.md)
-- [1.2 Add error logging](/exercise-1.2.md)
-
-
