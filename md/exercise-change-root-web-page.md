@@ -59,3 +59,5 @@ Save and reload NGINX configuration.
 ```
 nginx -s reload
 ```
+
+Confirm that the web page is displayed when you visit _localhost:8080/_
