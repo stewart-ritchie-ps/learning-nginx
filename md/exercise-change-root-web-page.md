@@ -1,6 +1,6 @@
 # Change root web page
 
-The default configuration defines that a static page is served for the root location.
+The default configuration defines that a static page for any location that starts with '/'. In actual fact thats any url we request.
 
 ```Nginx
   location / {
@@ -61,3 +61,29 @@ nginx -s reload
 ```
 
 Browse to [localhost:8080](http://localhost:8080/), and confirm the page displays.
+
+## Adding another page
+
+Our existing location rule is actually all that is needed to route the entire website (assuming that urls map to file paths relative to the root folder.
+
+If we want to serve a page for [localhost:8080/banana/](http://localhost:8080/banana/), we should create a sub-directory in our root and add an _index.html_ file.
+
+```
+mkdir /usr/web1/banana
+cp /usr/web1/index.html /usr/web1/banana
+```
+
+Edit the new _/banana/index.html_ file so that you can confirm the behaviour.
+
+```Html
+<html>
+  <head>
+    <title>Web 1</title>
+  </head>
+  <body>
+    <p>Have a banana!</p>
+  </body>
+</html>
+```
+
+Browse to [localhost:8080/banana/](http://localhost:8080/banana/).
