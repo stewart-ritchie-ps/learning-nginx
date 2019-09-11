@@ -10,8 +10,8 @@ Contributions welcome!
 
 - [Getting started](/md/getting-started.md)
 - [Configuration](/md/config-files.md)
-- - [Exercise - Enable web request logging](/md/exercise-1.1.md)
-- - [Exercise - Add error logging](/md/exercise-1.2.md)
+- - [Exercise - Enable request logging](/md/exercise-enable-request-logging.md)
+- - [Exercise - Add error logging](/md/exercise-add-error-logging.md)
 - [Contexts](/md/contexts.md)
 
 
