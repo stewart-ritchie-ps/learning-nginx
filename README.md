@@ -1,8 +1,8 @@
 # Getting to grips with NGINX
 
-Learning material for NGINX.
+This learning material is an introduction to working with NGINX.
 
-Evolving material produced during Dev Days.
+Contributions welcome!
 
 ## Contents
 
@@ -11,3 +11,6 @@ Evolving material produced during Dev Days.
 - - [Exercise - Enable web request logging](/md/exercise-1.1.md)
 - - [Exercise - Add error logging](/md/exercise-1.2.md)
 - [Contexts](/md/contexts.md)
+
+
+_An Immediate Media Dev-Day Production by Stewart Ritchie_
