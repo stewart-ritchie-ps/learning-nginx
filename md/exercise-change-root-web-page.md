@@ -53,3 +53,9 @@ nano /etc/nginx/conf.d/default.conf
       index  index.html index.htm;
   }
 ```
+
+Save and reload NGINX configuration.
+
+```
+nginx -s reload
+```
