@@ -113,3 +113,8 @@ server {
     #}
 }
 ```
+
+## Exercises
+
+- [Exercise - Enable web request logging](/exercise-1.1.md)
+- [Exercise - Add error logging](/exercise-1.2.md)
