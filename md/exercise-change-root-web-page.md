@@ -43,6 +43,10 @@ Create a file called _index.html_ with some contents, e.g.
 
 Now edit the default configuration so that it serves the new page.
 
+```
+nano /etc/nginx/conf.d/default.conf
+```
+
 ```Nginx
   location / {
       root   /usr/web1;
