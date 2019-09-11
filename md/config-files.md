@@ -116,5 +116,6 @@ server {
 
 ## Exercises
 
-- [Exercise - Enable web request logging](/exercise-1.1.md)
-- [Exercise - Add error logging](/exercise-1.2.md)
+* [Enable request logging](/exercise-enable-request-logging.md)
+* [Add error logging](/exercise-add-error-logging.md)
+* [Change root web page](/exercise-change-root-web-page.md)
