@@ -1,4 +1,4 @@
-# Add error logging (Ex 1.2)
+# Exercise - Add error logging
 
 Add the _error_log_ directive pointing to a new file.
 
