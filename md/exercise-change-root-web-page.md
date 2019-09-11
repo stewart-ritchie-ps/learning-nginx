@@ -88,8 +88,12 @@ Edit the new _/banana/index.html_ file so that you can confirm the behaviour.
 
 Browse to [localhost:8080/banana/](http://localhost:8080/banana/).
 
-## Gotcha - location rules are case-sensitive by default
+## Gotcha 1 - location rules are case-sensitive by default
 
 Try browsing to [localhost:8080/BANANA/](http://localhost:8080/BANANA/).
 
-Note: some browsers may 'helpfully' fix that URL to lower-case if you have visited that page in the same session. If this happens try using an incognito mode or a different browser. 
+Note: some browsers may 'helpfully' fix that URL to lower-case if you have visited that page in the same session. If this happens try using an incognito mode or a different browser.
+
+## Gotcha 2 - that trailing slash is important
+
+Try browsing to [localhost:8080/banana](http://localhost:8080/banana).
