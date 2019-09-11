@@ -43,7 +43,7 @@ docker container start 42e6ba0fde39
 
 ## Installing a file editor
 
-Docker images are very bare, so we need to install a file editor. Start by updating the package list. Then, install an editor. _Nano_ is a good choice for beginners but _vim_ tends to be used more commonly. 
+Docker images are very bare, so we need to install a file editor. Start by updating the package list. Then, install an editor. _Nano_ is a good choice for beginners but _Vim_ tends to be used more commonly.
 
 ```
 apt-get update
