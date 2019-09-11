@@ -13,4 +13,4 @@ Contributions welcome!
 - [Contexts](/md/contexts.md)
 
 
-_An Immediate Media Dev-Day Production by Stewart Ritchie_
+_An Immediate Media Dev-Day Production_
