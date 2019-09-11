@@ -66,7 +66,7 @@ Browse to [localhost:8080](http://localhost:8080/), and confirm the page display
 
 Our existing location rule is actually all that is needed to route the entire website (assuming that urls map to file paths relative to the root folder.
 
-If we want to serve a page for [localhost:8080/banana/](http://localhost:8080/banana/), we should create a sub-directory in our root and add an _index.html_ file.
+If we want to serve a page for _/banana/_, we should create a sub-directory in our root and add an _index.html_ file.
 
 ```
 mkdir /usr/web1/banana
