@@ -1,4 +1,4 @@
-# Enable web request logging (Ex 1.1)
+# Exercise - Enable web request logging
 
 Uncomment the _access_log_ directive in _default.conf_ and save.
 
