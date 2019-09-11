@@ -1,4 +1,4 @@
-# Configuration files
+# Configuration
 
 Configuration of NGINX is performed by editing the _.conf_ files in the NGINX root directory and sub-directories.
 
