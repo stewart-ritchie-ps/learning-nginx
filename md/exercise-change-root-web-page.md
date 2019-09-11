@@ -60,4 +60,4 @@ Save and reload NGINX configuration.
 nginx -s reload
 ```
 
-Browse to (http://localhost:8080/), and confirm the page displays.
+Browse to [localhost:8080](http://localhost:8080/), and confirm the page displays.
