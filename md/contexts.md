@@ -75,5 +75,5 @@ Note: your file is expectd to be _/usr/web1/banana/banana.html_ in the above exa
 
 ## Exercises
 
-* [Locations and routing](/md/exercise-locations-and-routing.md)
-* [Location matching](/md/exercise-location-matching.md)
+* [Locations and routing](/md/locations-and-routing.md)
+* [Location matching](/md/location-matching.md)
