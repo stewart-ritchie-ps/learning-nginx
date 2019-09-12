@@ -62,3 +62,47 @@ location ~* /banana/ {
 The two different file-system paths must still exist in order to serve two different files. Because whilst the match is now case insensitive, file paths are not.
 
 Try the curl commands again.
+
+## Combining prefix and regular expression matching
+
+What do you think should happen in this scenario, where we have possible prefix and regular expression matches?
+
+```Nginx
+location / {
+    autoindex on;
+    index root.html;
+
+    location /banana/ {
+        index prefix.html
+    }
+    
+    location ~* /banana/ {
+        index regex.html;
+    }
+}
+```
+
+```
+curl -i http://localhost:8080/banana/
+```
+
+Regular expressions always win over prefix matches. In order to change this behaviour we need to use the best non-regular expression modifier.
+
+## Best non-regular expression matching
+
+Let's change our example to use the best non-regular expression ^~ modifier.
+
+```Nginx
+location / {
+    autoindex on;
+    index root.html;
+
+    location ^~ /banana/ {
+        index prefix.html
+    }
+    
+    location ~* /banana/ {
+        index regex.html;
+    }
+}
+```
