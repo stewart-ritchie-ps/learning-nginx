@@ -45,6 +45,6 @@ We can match using a regular expression by using the **~** operator like this.
 In order for this to work, we'll need to create _/usr/web1/Banana/banana.html_. Then try...
 
 ```
-curl http://localhost:8080/banana
-curl http://localhost:8080/Banana
+curl -i http://localhost:8080/banana
+curl -i http://localhost:8080/Banana
 ```
