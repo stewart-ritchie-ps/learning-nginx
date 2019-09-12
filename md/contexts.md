@@ -1,4 +1,4 @@
-# Contexts
+# Contexts overview
 
 Configuration directives are grouped into contexts that scope their application allowing us to serve a specific file for a specific web request, or perform a redirect.
 
