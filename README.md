@@ -14,5 +14,6 @@ Contributions welcome!
     1. [Add error logging](/md/exercise-add-error-logging.md)
     1. [Change root web page](/md/exercise-change-root-web-page.md)
 3. [Contexts](/md/contexts.md)
+    1. [Locations and routing](/md/exercise-locations-and-routing.md)
 
 _An Immediate Media Dev-Day Production_
