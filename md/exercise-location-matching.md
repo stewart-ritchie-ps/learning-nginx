@@ -31,3 +31,13 @@ Try browsing [localhost:8080/banana/?t=12](http://localhost:8080/banana/?t=12) -
 This makes sense, because query parameters can be specified in any order, so matching against them is not easy.
 
 As we'll see this also applies for regular expression matching. Put simply, the _location_ directive only matches against the _location_ portion of the requested _url_.
+
+## Regular expression matching
+
+We can match using a regular expression by using the **~** operator like this.
+
+```Nginx
+    location ~ /[Bb]anana/ {
+        index banana.html;
+    }
+```
