@@ -76,3 +76,18 @@ When location contexts are nested directives are inherited from parent contexts.
         }
     }
 ```
+
+When we browse the [localhost:8080/banana/](http://localhost:8080/banana/) location, NGINX will look for the file /usr/web1/banana/root.html which is not present, but the _autoindex_ directive was inherited, so we'll see a directory listing.
+
+We can fix this by uncommenting the _index_ directive for the _/banana/_ location. Alternatively, we could add the filename to the list of possibilities for the root location like this:
+
+```Nginx
+    location / {
+        autoindex on;
+        index root.html banana.html;
+
+        location /banana/ {
+        }
+    }
+```
+
