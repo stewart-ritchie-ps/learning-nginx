@@ -7,7 +7,7 @@ server {
     listen 80;
     server_name localhost;
     
-    access_log  /var/log/nginx/host.access.log main;
+    access_log /var/log/nginx/host.access.log main;
     error_log /var/log/nginx/host.error.log error;
     
     root /usr/web1;
@@ -23,7 +23,7 @@ server {
     error_page 500 502 503 504 /50x.html;
     
     location = /50x.html {
-        root   /usr/share/nginx/html;
+        root /usr/share/nginx/html;
     }    
 }
 ```
