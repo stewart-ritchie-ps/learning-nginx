@@ -63,3 +63,16 @@ Check that you get a directory listing after ths change instead of a 403.
 Now let's add the expected file _/usr/web1/root.html_ and re-check - the page should be served and the _autoindex_ directive ignored for the root location.
 
 ## Locations can be nested
+
+When location contexts are nested directives are inherited from parent contexts. Test this by moving the /banana/ location inside the root location and commenting its _index_ directive.
+
+```Nginx
+    location / {
+        autoindex on;
+        index root.html;
+
+        location /banana/ {
+            #index banana.html;
+        }
+    }
+```
