@@ -72,8 +72,3 @@ Now we can override the _index_ directive for a different location.
 ```
 
 Note: your file is expected to be _/usr/web1/banana/banana.html_ in the above example.
-
-## Exercises
-
-* [Locations and routing](/md/locations-and-routing.md)
-* [Location matching](/md/location-matching.md)
