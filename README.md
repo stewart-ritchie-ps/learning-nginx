@@ -15,5 +15,6 @@ Contributions welcome!
     1. [Change root web page](/md/exercise-change-root-web-page.md)
 3. [Contexts](/md/contexts.md)
     1. [Locations and routing](/md/exercise-locations-and-routing.md)
+    1. [Location matching](/md/exercise-location-matching.md)
 
 _An Immediate Media Dev-Day Production_
