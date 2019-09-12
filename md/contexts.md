@@ -32,14 +32,25 @@ http {
 
 When contexts are nested like this, directives may be implicitly inherited from parent contexts, or overridden in child contexts.
 
-In the default configuration the _root_ and _index_ directives are declared within the _location / {}_ context, meaning that we would have to repeat these in each subsequent _location_ context. But, we could also move these directives to the _server_ context, where they would be inherited by all child contexts.
+In the default configuration the _root_ and _index_ directives are declared within the _location / {}_ context, meaning that we would have to repeat these in each subsequent _location_ context.
 
 ```Nginx
-  server {
-    root /usr/web1;
-    index index.html index.htm;
-    
-    location / {
+    server {
+        location / {
+            root /usr/web1;
+            index index.html index.htm;
+        }
     }
-  }
+```
+
+But, we could also move these directives to the _server_ context, where they would be inherited by all child contexts.
+
+```Nginx
+    server {
+        root /usr/web1;
+        index index.html index.htm;
+
+        location / {
+        }
+    }
 ```
