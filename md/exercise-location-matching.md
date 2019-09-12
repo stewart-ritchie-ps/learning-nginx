@@ -42,7 +42,7 @@ location ~ /[Bb]anana/ {
 }
 ```
 
-In order for this to work, we'll need to create _/usr/web1/Banana/banana.html_. Then try...
+In order for this to work, we'll need to create a modified _/usr/web1/Banana/banana.html_ file (note the capital-B).
 
 ```
 curl -i http://localhost:8080/banana
