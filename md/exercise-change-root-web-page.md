@@ -97,3 +97,5 @@ Note: some browsers may 'helpfully' fix that URL to lower-case if you have visit
 ## Gotcha 2 - That trailing slash is important
 
 Try browsing to [localhost:8080/banana](http://localhost:8080/banana).
+
+We'll have a look at how to address these gotchas in following exercises.
