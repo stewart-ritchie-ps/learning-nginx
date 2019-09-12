@@ -33,3 +33,8 @@ The first thing to note is that the _location_ context is only concerned with th
 location /hello/ {
 }
 ```
+
+## Exercises
+
+* [Locations and routing](/md/locations-and-routing.md)
+* [Location matching](/md/location-matching.md)
