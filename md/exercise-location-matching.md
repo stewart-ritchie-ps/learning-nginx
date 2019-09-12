@@ -73,7 +73,7 @@ location / {
     index root.html;
 
     location /banana/ {
-        index prefix.html
+        index prefix.html;
     }
     
     location ~* /banana/ {
@@ -98,7 +98,7 @@ location / {
     index root.html;
 
     location ^~ /banana/ {
-        index prefix.html
+        index prefix.html;
     }
     
     location ~* /banana/ {
