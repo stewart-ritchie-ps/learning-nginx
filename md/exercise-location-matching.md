@@ -26,6 +26,8 @@ The _/banana/_ location will function as before. But _/banana/icecream/_ is no l
 
 With exact matching in place, it's a good time to demonstrate that the query portion of the url is ignored when it comes to location matching.
 
-Try browsing [localhost:8080/banana/?t=12](http://localhost:8080/banana/?t=12) - the /usr/web1/banana/banana.html page should still serve. This makes sense, because query parameters can be specified in any order, so matching against them is not easy.
+Try browsing [localhost:8080/banana/?t=12](http://localhost:8080/banana/?t=12) - the /usr/web1/banana/banana.html page should still serve.
+
+This makes sense, because query parameters can be specified in any order, so matching against them is not easy.
 
 As we'll see this also applies for regular expression matching. Put simply, the _location_ directive only matches against the _location_ portion of the requested _url_.
