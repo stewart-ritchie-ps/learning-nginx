@@ -28,7 +28,7 @@ server {
 }
 ```
 
-Copy and modify an index page as _/usr/web1/banana/banana.html_ so that you can identify that the right page is being served.
+Copy an index page to _/usr/web1/banana/banana.html_ - modify it so that you can identify that the right page is being served.
 
 Then we can test:
 
