@@ -58,8 +58,8 @@ If we want to allow directory listing, we can add the _autoindex_ directive.
     }  
 ```
 
-Check that you get a directory listing in this scenario. 
+Check that you get a directory listing after ths change instead of a 403. 
 
 Now let's add the expected file _/usr/web1/root.html_ and re-check - the page should be served and the _autoindex_ directive ignored for the root location.
 
-
+## Locations can be nested
