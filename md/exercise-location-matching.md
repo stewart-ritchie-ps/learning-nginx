@@ -106,3 +106,5 @@ location / {
     }
 }
 ```
+
+This time the prefix version is served.
