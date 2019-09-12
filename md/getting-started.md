@@ -11,8 +11,7 @@ docker pull nginx
 docker run -p 8080:80 -d nginx
 ```
 
-The local 8080 port is mapped to the default port on which NGINX listens (80). Check that it is running by browsing http://localhost:8080/ and seeing the NGINX welcome page.
-
+The local 8080 port is mapped to the default port on which NGINX listens (80). Check that NGINX is running by browsing to [localhost:8080/](http://localhost:8080/) and seeing the NGINX welcome page.
 
 You can connect to the container using the container id returned by _docker run_, or at any time by listing your docker containers.
 
@@ -51,4 +50,4 @@ apt-get install nano
 apt-get install vim
 ```
 
-Note: if you need to familiarise yourself with the editor, do so now (we won't cover those details here).
+Note: familiarise yourself with your chosen editor if needed (we won't cover it here).
