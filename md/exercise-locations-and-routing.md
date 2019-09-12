@@ -33,4 +33,4 @@ Copy an index page to _/usr/web1/banana/banana.html_ - modify it so that you can
 Then we can test:
 
 * The file /usr/web1/index.html should be served for the location /.
-* The file //usr/web1/banana/banana.html should be served for the location /banana/.
+* The file /usr/web1/banana/banana.html should be served for the location /banana/.
