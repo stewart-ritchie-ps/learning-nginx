@@ -10,8 +10,8 @@ Contributions welcome!
 
 1. [Getting started](/md/getting-started.md)
 2. [Configuration](/md/config-files.md)
-    1. [Enable request logging (exercise)](/md/exercise-enable-request-logging.md)
-    1. [Add error logging (exercise)](/md/exercise-add-error-logging.md)
+    1. [Enable request logging](/md/exercise-enable-request-logging.md)
+    1. [Add error logging](/md/exercise-add-error-logging.md)
     1. [Change root web page](/md/exercise-change-root-web-page.md)
 3. [Contexts](/md/contexts.md)
 
