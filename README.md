@@ -22,7 +22,7 @@ curl -i http://localhost:8080/
     1. [Enable request logging](/md/enable-request-logging.md)
     1. [Add error logging](/md/add-error-logging.md)
     1. [Change root web page](/md/change-root-web-page.md)
-3. [Contexts](/md/contexts.md)
+3. [Contexts and directives](/md/contexts-and-directives.md)
 4. [Location context](/md/location-context.md)
     1. [Locations and routing](/md/locations-and-routing.md)
     1. [Location matching](/md/location-matching.md)
