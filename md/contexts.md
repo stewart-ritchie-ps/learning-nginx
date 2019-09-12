@@ -54,3 +54,21 @@ But, we could also move these directives to the _server_ context, where they wou
         }
     }
 ```
+
+Now we can override the _index_ directive for a different location.
+
+```Nginx
+    server {
+        root /usr/web1;
+        index index.html index.htm;
+
+        location / {
+        }
+
+        location /banana/ {
+            index banana.html;
+        }
+    }
+```
+
+Note: your file should be _/usr/web1/banana/banana.html_ in the above example.
