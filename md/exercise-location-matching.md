@@ -12,7 +12,7 @@ Create the _/usr/web1/banana/icecream/banana.html_ file so that you can test thi
 
 ## Exact matching
 
-If we need to match a location exactly we can modify the location directive with the **=** modifier like this.
+If we need to match a location exactly we can modify the location directive with the = modifier like this.
 
 ```Nginx
 location = /banana/ {
@@ -34,7 +34,7 @@ As we'll see this also applies for regular expression matching. Put simply, the 
 
 ## Regular expression matching
 
-We can match using a regular expression by using the **~** modifier like this.
+We can match using a regular expression by using the ~ modifier like this.
 
 ```Nginx
 location ~ /[Bb]anana/ {
@@ -51,7 +51,7 @@ curl -i http://localhost:8080/Banana
 
 ## Case-insensitve regular expression matching
 
-Actually we can achieve a similar effect by using the case-insensitive **~*** modifier.
+Actually we can achieve a similar effect by using the case-insensitive ~* modifier.
 
 ```Nginx
 location ~* /banana/ {
