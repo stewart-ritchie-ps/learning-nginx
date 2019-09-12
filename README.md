@@ -6,6 +6,15 @@ Current status: **EVOLVING**
 
 Contributions welcome!
 
+## Pre-requisites and tips
+
+* We'll be working with Docker from the command-line, you'll need to have Docker Desktop installed and be happy working with CLI tools.
+* Exercises usually invlove making some NGNIX changes and testing their effect on web content that is served. Occasionally, you may find that browsers are helpfully unhelpful, e.g. automatically fixing urls and handling redirects, making it hard to reason about what is happening. In this case _curl_ is you friend - get used to ...
+
+```
+curl -i http://localhost:8080/
+```
+
 ## Contents
 
 1. [Getting started](/md/getting-started.md)
