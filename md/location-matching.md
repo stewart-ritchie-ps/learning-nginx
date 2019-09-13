@@ -107,4 +107,10 @@ location / {
 }
 ```
 
-This time the prefix version is served.
+```
+curl -i http://localhost:8080/banana/
+```
+
+This time the prefix version is served for lower-case version (changing the case serves the regex version as expected).
+
+Note: using the exact match = modifier will also win over the regular expression, but is limited to cases where an exact match is all you need.
